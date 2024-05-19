@@ -27,7 +27,6 @@ class RotateVector(Scene):
 
         # Show the action of rotation by theta on e_1
         v1_label = MathTex(r"\begin{pmatrix}1\\0\end{pmatrix}", r"\mapsto", r"\begin{pmatrix}\cos\theta\\\sin\theta\end{pmatrix}").next_to(v1, UR)
-        # self.play(TransformMatchingTex(Group(v1_horizonal_line_label, v1_vertical_line_label, e1_label), v1_label))
         self.play(ReplacementTransform(e1_label[1], v1_label[0]), FadeOut(e1_label[0]), Write(v1_label[1]), Write(v1_label[2][:1]), ReplacementTransform(v1_horizonal_line_label[0], v1_label[2][1:5]), ReplacementTransform(v1_vertical_line_label[0], v1_label[2][5:9]), Write(v1_label[2][9:10]))
         self.wait()
 
