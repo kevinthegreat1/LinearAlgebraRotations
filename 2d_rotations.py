@@ -5,7 +5,7 @@ class RotateVector(Scene):
     def construct(self):
         # Create a number plane and a vector v_1 = e_1
         number_plane = NumberPlane().scale(3)
-        v1 = Vector(number_plane.c2p(1, 0, 0), color=LIGHT_BROWN)
+        v1 = Vector(number_plane.c2p(1, 0, 0), color=RED)
         e1_label = MathTex(r"\vec{e_1}=", r"\begin{pmatrix}1\\0\end{pmatrix}").next_to(v1, DR)
         self.play(Create(number_plane), Create(v1), Write(e1_label))
         self.wait()
